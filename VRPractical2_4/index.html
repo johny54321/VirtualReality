@@ -2,12 +2,16 @@
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
+    <script src="rocket.js"></script>
   </head>
   <body>
       <a-scene>
+        <a-assets>
+          <img id="sky" src="sky.jpg">
+        </a-assets>
         <!-- Challenge 1: Add a propriate plane and sky for the missile launch site -->
-    
-        
+        <a-plane rotation="-90 0 0" repeat="20 1" scale="50 50 50"></a-plane>
+        <a-sky src="#sky"></a-sky>
       
       <!-- Camera is added so that you do not "spawn" at the origin -->
       <a-camera position="0 1.3 4"></a-camera>
