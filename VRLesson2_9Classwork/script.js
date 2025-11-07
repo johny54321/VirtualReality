@@ -1,16 +1,28 @@
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "xoooooooooooooooooooooox",
+  "xo-t-------------t----ox",
+  "xo---t---------t------ox",
+  "xo----t---------t-----ox",
+  "xo-------t---------t--ox",
+  "xo---t--------t-------ox",
+  "xo-----t-----------t--ox",
+  "xo---t------t---------ox",
+  "xo---t-------------t--ox",
+  "xo------t-------t-----ox",
+  "xo----t--------t------ox",
+  "xo-------t-------t----ox",
+  "xo--t--------t--------ox",
+  "xo------t---------t---ox",
+  "xo----t-----------t---ox",
+  "xo------t-----t-------ox",
+  "xo--t--------t--------ox",
+  "xo-------t------t-----ox",
+  "xo---t------t---------ox",
+  "xo-t--------------t---ox",
+  "xo-----t------t-------ox",
+  "xoooooooooooooooooooooox",
+  "xxxxxxxxxxxxxxxxxxxxxxxx",
 ];
 let scene;
 
@@ -21,12 +33,12 @@ window.addEventListener("DOMContentLoaded",function() {
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "x"){
-        new Block(c,1,r)
+        new Block(c * 2,1,r * 2)
       }
-      else if(cols[c] == "T"){
-        new Tree(c,1,r);
+      else if(cols[c] == "t"){
+        new Tree(c * 2,1,r * 2);
       }else if(cols[c]=="o"){
-        new Rock(c,1,r)
+        new Rock(c * 2,1,r * 2)
       }
     }
 

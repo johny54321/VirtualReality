@@ -8,6 +8,7 @@ class Rock{
     this.obj.setAttribute("color","gray");
     this.obj.setAttribute("radius",0.5);
     this.obj.setAttribute("position",{x:x,y:y,z:z});
+    this.obj.setAttribute("scale", "2.5 2.5 2.5");
     scene.append(this.obj);
 
   }

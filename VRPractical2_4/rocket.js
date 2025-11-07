@@ -1,5 +1,5 @@
-class Rocket{
-  constructor(x,y,z){
+class Rocket {
+  constructor(x,z){
     this.obj = document.createElement("a-entity");
     this.x = x;
     this.y = y;
