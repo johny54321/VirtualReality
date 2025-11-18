@@ -11,37 +11,38 @@
 */
 
 let maze = [
-  "xxxxxxxxxxx--xxxxxxxxxxx",
-  "x----x--xx---x---x----xx",
-  "x-xx-xx----xxx-x-x-xx--x",
-  "x-x-----xxx-----xxxxxx-x",
-  "xxxx-xx-----xxx-----xx-x",
-  "x-x---xxxxx-xxx-xxx----x",
-  "x--xx-----------x--xxx-x",
-  "xx-xx-xxxx-x-xxxxx---xxx",
-  "x-----xxxx-x-----xxx---x",
-  "x-xxx---xx-xxx-x---x-x-x",  
-  "x-xxxxx--------xxx-xxx-x",
-  "xx----xxxx-xxxx--x-----x",
-  "xxxxx---x--------x-xxxxx",
-  "xx----x-xxxxxxxx-x-xxxxx",
-  "x--xxx----------------xx",
-  "x-xxxx-xxxxxxxxxxxxx--xx",
-  "x--x---x---------------x",
-  "xxxxxxxx---------------x",
-  "xx---------------------x",
-  "x----------------------x",
-  "x---xxxx---------------x",
-  "x--x---x---------------x",
-  "x--x-x-xxxxxxxxxxxxxxxxx",
-  "x----x-xx---x---xx-----x",
-  "xxxx-x---xx-x-x-xx-xxxxx",
-  "xxx--xxxxxx-xxx--------x",
-  "xx--x--xxxx-xxxxxxxxxx-x",
-  "xx-xxx----x------------x",
-  "xx--xxxxx-xxxx-xxxxxxx-x",
-  "xxx--------------------x",
-  "xxxxxxxxxxx--xxxxxxxxxxx",
+  "xxxxxxxxxxxttxxxxxxxxxxx",
+  "xttttxttxxtttxtttxttttxx",
+  "xtxxtxxttttxxxtxtxtxxttx",
+  "xtxtttttxxxtttttxxxxxxtx",
+  "xxxxtxxtttttxxxtttttxxtx",
+  "xtxtttxxxxxtxxxtxxxttttx",
+  "xttxxtttttttttttxttxxxtx",
+  "xxtxxtxxxxtxtxxxxxtttxxx",
+  "xtttttxxxxtxtttttxxxtttx",
+  "xtxxxtttxxtxxxtxtttxtxtx",  
+  "xtxxxxxttttttttxxxtxxxtx",
+  "xxttttxxxxtxxxxttxtttttx",
+  "xxxxxtttxttttttttxtxxxxx",
+  "xxttttxtxxxxxxxxtxtxxxxx",
+  "xttxxxttttttttttttttttxx",
+  "xtxxxxtxxxxxxxxxxxxxttxx",
+  "xttttttx----------tttttx",
+  "xxxxxxxx--------------tx",
+  "xxttttt----------------x",
+  "xttttt-----------------x",
+  "xtttxxxxt-------------tx",
+  "xttxtttxtttt--------tttx",
+  "xttxtxtxxxxxxxxxxxxxxxxx",
+  "xttttxtxxtttxtttxxtttttx",
+  "xxxxtxtttxxtxtxtxxtxxxxx",
+  "xxxttxxxxxxtxxxttttttttx",
+  "xxttxttxxxxtxxxxxxxxxxtx",
+  "xxtxxxttttxttttttttttttx",
+  "xxttxxxxxtxxxxtxxxxxxxtx",
+  "xxxttttttttttttttttttttx",
+  "xxxxxxxxxxxttxxxxxxxxxxx",
+  "------------------------",
 ];
 
 /* Challenge 2
@@ -56,11 +57,18 @@ window.addEventListener("DOMContentLoaded",function() {
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "x"){
-        new Wall(c * 2.75,2.5,r * 2.75)
+        new Wall(c * 4.75,2.5,r * 4.75)
+      } 
+      else if(cols[c] == "t"){ 
+        new Tree(c * 4.75, 1,r * 4.75 )
+      } 
+      else if(cols[c] == "h"){ 
+        new House(c * 4.75, 0,r * 4.75 )
       }
     }
   }
 }
+
 
 
 

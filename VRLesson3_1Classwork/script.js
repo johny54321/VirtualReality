@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded",function() {
   let myBox = document.querySelector("#myBox");
-  
-  //Task 3: Create a variable for the cylinder.  Get the element from the HTML
   let myCyl = document.querySelector("#myCyl");
+  //Task 3: Create a variable for the cylinder.  Get the element from the HTML
+
 
   myBox.addEventListener("mouseenter",function(){
     this.setAttribute("height",2);
@@ -15,5 +15,4 @@ window.addEventListener("DOMContentLoaded",function() {
   myCyl.addEventListener("click",function(){
     this.setAttribute("opacity",0);
   })
-
 })
