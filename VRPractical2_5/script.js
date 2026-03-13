@@ -59,12 +59,6 @@ window.addEventListener("DOMContentLoaded",function() {
       if(cols[c] == "x"){
         new Wall(c * 4.75,2.5,r * 4.75)
       } 
-      else if(cols[c] == "t"){ 
-        new Tree(c * 4.75, 1,r * 4.75 )
-      } 
-      else if(cols[c] == "h"){ 
-        new House(c * 4.75, 0,r * 4.75 )
-      }
     }
   }
 }

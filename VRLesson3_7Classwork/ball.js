@@ -22,6 +22,7 @@ class Ball{
        Create a cursor and add it to the camera.  This will
        enable you to interact with other objects from this camera
     */
+   
     
     /* Challenge 4
        When the user clicks on this sphere, turn off the cameras of 

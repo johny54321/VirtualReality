@@ -17,12 +17,25 @@ window.addEventListener("DOMContentLoaded",function() {
 })
 
 function loop(){
+  for(let block of blocks){
+    if(dart && distance(block.obj,dart.obj) < 1){
+      Block.obj.shrink()
+    }
+  }
+
+  if (dart){ 
+    dart.fly();
+  }
+
   /* Challenge
      Traverse the blocks and call the shrink function.  
      If dart hits a block, set the blocks shot variable to true.
      Note: Explore the Block class for an understanding of the 
      above two tasks.
   */
+
+
+  
 
   if(dart){
     dart.fly();

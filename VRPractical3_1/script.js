@@ -1,13 +1,23 @@
 let carousel,balloon1,balloon2,surpriseBox;
 
+window.onload = function(){
 window.addEventListener("DOMContentLoaded",function() {
   carousel = document.getElementById("carousel-arms");
   carousel.r = 0;
   carousel.dr = 1;
   /* Challenge 1: Make the carousel rotate only when the mouse is on it.  Hint: Manipulate a flag called "rotate" between true and false. 
    Two event listeners required. */
-  
-   
+  carousel.addEventListener("mouseenter",function(){
+    carousel.rotate=true;
+  })
+function loop(){
+  if(carousel.rotate){
+    carousel.r += carousel.dr;
+    carousel.setAttribute("rotation",{x:0, y:0, z: carousel.r});
+  }
+} 
+
+
   balloon1 = document.getElementById("balloon1"); //blue
   balloon1.y = 5
   balloon1.dy = -0.05;
@@ -24,13 +34,9 @@ window.addEventListener("DOMContentLoaded",function() {
   
 
   loop();
-}) 
 
-function loop(){
-  if(carousel.rotate){
-    carousel.r += carousel.dr;
-    carousel.setAttribute("rotation",{x:0, y:0, z: carousel.r});
-  }
+
+
   if(balloon1.fall){
     //Challenge 3: Add the animation to make the balloon fall.  Hint: Look at the HTML to find out the original x and z coordinates.
     
@@ -41,4 +47,4 @@ function loop(){
   window.requestAnimationFrame( loop );
 }
 
-
+)}

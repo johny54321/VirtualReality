@@ -7,7 +7,14 @@ window.addEventListener("DOMContentLoaded",function() {
   /* Challenge 1
      Add 10 new PotHole at random locations to the potholes array
   */
-  
+  let Potholes=[]
+  for (let i = 0; i < 10; i++){ 
+    x = rnd(-10,10);
+    y = 1;
+    z = rnd(-10,10);
+    Potholes.push(new Pothole(x, y, z));
+  }
+
   setTimeout(loop,100);
 })
 function loop(){
